@@ -21,9 +21,16 @@ body {
   max-width: 650px;
 }
 
+/* Top Buttons */
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
 button {
   padding: 10px 16px;
-  margin: 5px;
   font-size: 16px;
   cursor: pointer;
   border: none;
@@ -37,13 +44,27 @@ button:hover {
   background: #ff5c5c;
 }
 
+/* Categories below buttons */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.categories input {
+  margin-right: 3px;
+}
+
+/* Output */
 .output {
-  margin-top: 20px;
+  margin-bottom: 15px;
   padding: 15px;
   background: #222;
   border-radius: 6px;
   font-size: 18px;
   min-height: 60px;
+  word-wrap: break-word;
 }
 
 body.light .output {
@@ -51,18 +72,17 @@ body.light .output {
   color: #111;
 }
 
-/* Controls below output */
-.controls {
-  margin-top: 15px;
+/* Bottom toggles */
+.bottom-toggles {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 /* Switch Styling */
 .switch {
   display: inline-block;
-  margin: 5px 0;
   position: relative;
   width: 60px;
   height: 28px;
@@ -93,8 +113,3 @@ body.light .output {
 
 input:checked + .slider { background-color: #ff3b3b; }
 input:checked + .slider:before { transform: translateX(32px); }
-
-.categories label {
-  display: inline-block;
-  margin: 0 5px;
-}
