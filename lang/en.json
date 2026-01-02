@@ -1,0 +1,60 @@
+{
+  "ui": {
+    "title": "Balkan Ragebait Generator",
+    "subtitle": "Made by an idiot.",
+    "generate": "Generate Ragebait",
+    "copy": "Copy to Clipboard",
+    "clickGenerate": "Click generate 👀",
+    "light": "Light",
+    "uncleMode": "Numerical Uncle Mode",
+    "connector": "and said",
+    "copied": "Copied!"
+  },
+  "categories": {
+    "food": "Food",
+    "history": "History",
+    "bureaucracy": "Bureaucracy",
+    "driving": "Driving",
+    "general": "General"
+  },
+  "phrases": {
+    "authority": [
+      "My uncle",
+      "My uncle who lives in Hamburg",
+      "A guy I know from Germany",
+      "A retired taxi driver",
+      "Someone who worked briefly in government",
+      "Uncle #6.7"
+    ],
+    "credibility": [
+      "was there",
+      "knows how it really works",
+      "explained it very clearly",
+      "saw documents",
+      "heard it directly",
+      "doesn't lie about these things"
+    ],
+    "topics": {
+      "food": ["yogurt","rakija","burek","coffee","salad origins"],
+      "history": ["borders","maps","who invented what","who was first","what really happened"],
+      "bureaucracy": ["paperwork","permits","visas","stamps","offices closing early"],
+      "driving": ["traffic rules","taxi driving","speed limits","parking","roads"],
+      "general": ["everything else","vibes","common sense","daily life","everyone agrees"]
+    },
+    "claims": [
+      "is actually the same everywhere",
+      "was already solved years ago",
+      "depends on the year",
+      "only makes sense if you know the vibe",
+      "is misunderstood by everyone",
+      "was decided unofficially"
+    ],
+    "finishers": [
+      "Everyone knows this.",
+      "This isn't controversial.",
+      "People just don't like the truth.",
+      "I thought this was common knowledge.",
+      "I don't know why people argue."
+    ]
+  }
+}
