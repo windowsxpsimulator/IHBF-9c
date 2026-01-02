@@ -1,161 +1,159 @@
+/* style.css - updated for multilingual UI + language list + toggles placement */
+
 body.dark {
   background: #111;
   color: #eee;
 }
 
 body.light {
-  background: #fefefe;
-  color: #222;
+  background: #f7f7f7;
+  color: #111;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
 }
 
 .container {
   text-align: center;
-  max-width: 650px;
-  width: 100%;
-  padding: 10px;
+  width: min(920px, 96%);
+  padding: 22px;
 }
 
+/* Title and subtitle */
+h1 {
+  margin: 6px 0 2px;
+  font-size: 26px;
+}
+p { margin: 0 0 12px; color: #bbb; }
+
+/* Top buttons (generate / copy) */
 .top-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 button {
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   background: #ff3b3b;
   color: white;
-  transition: 0.2s;
+  transition: 0.12s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
+button:hover { transform: translateY(-1px); filter: brightness(1.03); }
+button:active { transform: translateY(0); }
 
-button:hover {
-  background: #ff5c5c;
-}
-
+/* Category row below the top buttons */
 .categories {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin: 10px 0 14px;
   flex-wrap: wrap;
 }
-
-.categories input {
-  margin-right: 3px;
+.categories label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  background: rgba(255,255,255,0.03);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.03);
 }
+body.light .categories label { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.06); }
 
-/* Output Styling */
+/* output box (sentence) */
 .output {
-  margin-bottom: 15px;
-  padding: 15px;
+  margin: 6px auto 12px;
+  padding: 18px;
   background: #222;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 18px;
-  min-height: 60px;
-  word-wrap: break-word;
+  min-height: 68px;
+  max-width: 920px;
+  word-break: break-word;
 }
+body.light .output { background: #fff; color: #111; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 
-body.light .output {
-  background: #ddd;
-  color: #111;
-}
-
-/* Bottom Toggles Styling (Box Buttons) */
+/* bottom toggles row */
 .bottom-toggles {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 8px;
+  align-items: center;
 }
 
-/* Box Container for Buttons */
-.toggle-box {
+/* the switch look */
+.switch {
+  position: relative;
+  width: 62px;
+  height: 30px;
   display: inline-block;
-  padding: 10px;
-  border-radius: 6px;
-  background-color: #333;
-  width: 180px;
-  text-align: center;
-  margin: 5px;
 }
-
-body.light .toggle-box {
-  background-color: #fff;
-}
-
-body.dark .toggle-box {
-  background-color: #444;
-}
-
-body.light #numUncleBox {
-  background-color: green;
-}
-
-body.dark #numUncleBox {
-  background-color: red;
-}
-
-body.light #lightModeBox {
-  background-color: black;
-}
-
-body.dark #lightModeBox {
-  background-color: white;
-}
-
-/* Box Buttons */
-button {
-  padding: 10px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background: #ff3b3b;
-  color: white;
+.switch input { display: none; }
+.slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #cfcfcf;
   transition: 0.2s;
 }
-
-button:hover {
-  background: #ff5c5c;
+.slider:before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.2s;
 }
+.switch input:checked + .slider { background: #ff3b3b; }
+.switch input:checked + .slider:before { transform: translateX(32px); }
 
-/* Responsive Design for smaller screens */
-@media (max-width: 600px) {
-  .top-buttons {
-    flex-direction: column;
-  }
-  
-  .categories {
-    flex-direction: column;
-  }
-  
-  .bottom-toggles {
-    flex-direction: column;
-  }
+/* Language list (below toggles) */
+#languageList {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  align-items: center;
+}
+.langBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.03);
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+}
+.langBtn .langName { font-size: 13px; opacity: 0.95; }
+.langBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.18); }
+.langBtn.active { outline: 2px solid rgba(255,59,59,0.18); background: rgba(255,59,59,0.06); }
 
-  button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+/* copy toast */
+#copyToast { font-size: 14px; }
 
-  .toggle-box {
-    width: 100%;
-  }
+@media (max-width:520px) {
+  .top-buttons { flex-direction: column; gap: 8px; }
+  .categories { gap: 8px; font-size: 13px; }
+  #languageList { grid-template-columns: 1fr; }
 }
