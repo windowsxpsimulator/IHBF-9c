@@ -6,9 +6,7 @@ const authorities = [
   "Someone who worked briefly in government"
 ];
 
-const numbers = [
-  "#1", "#2", "#3", "#4", "#5", "#6.7", "#8"
-];
+const numbers = ["#1", "#2", "#3", "#4", "#5", "#6.7", "#8"];
 
 const credentials = [
   "was there",
@@ -53,11 +51,9 @@ function generate() {
   const checkedCategories = Array.from(document.querySelectorAll(".categories input:checked"))
                                 .map(c => c.value);
   
-  // Build authority string
   let authority = random(authorities);
   if (numMode) authority += " " + random(numbers);
 
-  // Pick a topic based on selected categories
   let availableTopics = [];
   checkedCategories.forEach(cat => {
     if (topics[cat]) availableTopics = availableTopics.concat(topics[cat]);
@@ -69,12 +65,10 @@ function generate() {
   document.getElementById("output").innerText = sentence;
 }
 
-// Theme toggle
 document.getElementById("themeToggle").addEventListener("change", function() {
   document.body.className = this.checked ? "dark" : "light";
 });
 
-// Copy to clipboard
 function copyText() {
   const text = document.getElementById("output").innerText;
   navigator.clipboard.writeText(text).then(() => {
