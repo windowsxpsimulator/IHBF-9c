@@ -1,0 +1,60 @@
+{
+  "ui": {
+    "title": "Gjeneratori Ballkanik i Ragebait",
+    "subtitle": "E bërë nga një idiot.",
+    "generate": "Gjenero Ragebait",
+    "copy": "Kopjo",
+    "clickGenerate": "Kliko gjenero 👀",
+    "light": "Dritë",
+    "uncleMode": "Modaliteti Numerik i Xhaxhait",
+    "connector": "dhe tha",
+    "copied": "Kopjuar!"
+  },
+  "categories": {
+    "food": "Ushqim",
+    "history": "Historik",
+    "bureaucracy": "Burokraci",
+    "driving": "Drejtim",
+    "general": "Gjithësisht"
+  },
+  "phrases": {
+    "authority": [
+      "Xhaxhai im",
+      "Xhaxhai im në Hamburg",
+      "Një djalë që njoh nga Gjermania",
+      "Një taksi i dalë në pension",
+      "Dikush që punoi shkurt në qeveri",
+      "Xhaxhai #6.7"
+    ],
+    "credibility": [
+      "ishte atje",
+      "di se si funksionon vërtet",
+      "e shpjegoi shumë qartë",
+      "pa dokumente",
+      "e dëgjoi personalisht",
+      "nuk gënjen për këto gjëra"
+    ],
+    "topics": {
+      "food": ["kos","rakija","burek","kafe","origjina e sallatës"],
+      "history": ["kufijtë","hartat","kush e shpiku çfarë","kush ishte i pari","si ndodhi realisht"],
+      "bureaucracy": ["formularë","leje","viza","vulë","zyra që mbyllen herët"],
+      "driving": ["rregullat rrugore","njoftim taksie","kufijtë e shpejtësisë","parkim","rrugët"],
+      "general": ["gjithçka tjetër","vibe","arsim i shëndoshë","jetë e përditshme","të gjithë bien dakord"]
+    },
+    "claims": [
+      "në të vërtetë është e njëjtë kudo",
+      "u zgjidh para viteve",
+      "varet nga viti",
+      "ka kuptim vetëm nëse e di vibe-in",
+      "të gjithë e kuptojnë gabim",
+      "u vendos jozyrtarisht"
+    ],
+    "finishers": [
+      "Të gjithë e dinë këtë.",
+      "Nuk është e diskutueshme.",
+      "Njerëzit thjesht nuk duan të vërtetën.",
+      "Mendoja se kjo është e ditur nga të gjithë.",
+      "Nuk e di pse njerëzit debatojnë."
+    ]
+  }
+}
