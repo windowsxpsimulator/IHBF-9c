@@ -71,6 +71,8 @@ function toggleTheme() {
 }
 
 function toggleNumUncle() {
+  const numUncleButton = document.getElementById("numMode");
+  numUncleButton.checked = !numUncleButton.checked;
   updateToggleBoxes();
 }
 
