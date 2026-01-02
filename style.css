@@ -51,10 +51,18 @@ body.light .output {
   color: #111;
 }
 
+/* Controls below output */
+.controls {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* Switch Styling */
 .switch {
   display: inline-block;
-  margin: 10px 0;
+  margin: 5px 0;
   position: relative;
   width: 60px;
   height: 28px;
