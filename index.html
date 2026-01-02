@@ -9,33 +9,40 @@
 
 <div class="container">
   <h1>🧨 Balkan Ragebait Generator</h1>
-  <p>For memes, parody, and fictional chaos only.</p>
+  <p>Made by an i d i o t.</p>
 
-  <!-- Theme Switch -->
-  <label class="switch">
-    <input type="checkbox" id="themeToggle">
-    <span class="slider"></span> Dark / Light
-  </label>
-
-  <!-- Category Selector -->
-  <div class="categories">
-    <label><input type="checkbox" value="Food" checked> Food</label>
-    <label><input type="checkbox" value="History" checked> History</label>
-    <label><input type="checkbox" value="Bureaucracy" checked> Bureaucracy</label>
-    <label><input type="checkbox" value="Driving" checked> Driving</label>
-    <label><input type="checkbox" value="General" checked> General</label>
-  </div>
-
-  <!-- Numerical Mode -->
-  <label class="switch">
-    <input type="checkbox" id="numMode"> 
-    <span class="slider"></span> Numerical Uncle Mode
-  </label>
-
+  <!-- Buttons -->
   <button onclick="generate()">Generate Ragebait</button>
   <button onclick="copyText()">📋 Copy to Clipboard</button>
 
+  <!-- Output -->
   <div id="output" class="output">Click generate 👀</div>
+
+  <!-- Controls BELOW output -->
+  <div class="controls">
+
+    <!-- Theme Switch -->
+    <label class="switch">
+      <input type="checkbox" id="themeToggle" checked>
+      <span class="slider"></span> Dark / Light
+    </label>
+
+    <!-- Numerical Uncle Mode -->
+    <label class="switch">
+      <input type="checkbox" id="numMode"> 
+      <span class="slider"></span> Numerical Uncle Mode
+    </label>
+
+    <!-- Category Selector -->
+    <div class="categories">
+      <label><input type="checkbox" value="Food" checked> Food</label>
+      <label><input type="checkbox" value="History" checked> History</label>
+      <label><input type="checkbox" value="Bureaucracy" checked> Bureaucracy</label>
+      <label><input type="checkbox" value="Driving" checked> Driving</label>
+      <label><input type="checkbox" value="General" checked> General</label>
+    </div>
+
+  </div>
 </div>
 
 <script src="script.js"></script>
