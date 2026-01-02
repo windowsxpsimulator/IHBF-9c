@@ -95,11 +95,11 @@ body.light .toggle-box {
 }
 
 body.light #numUncleBox {
-  background-color: red;
+  background-color: green;
 }
 
 body.dark #numUncleBox {
-  background-color: green;
+  background-color: red;
 }
 
 body.light #lightModeBox {
