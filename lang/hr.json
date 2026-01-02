@@ -1,0 +1,60 @@
+{
+  "ui": {
+    "title": "Balkanski Generator Ragebait",
+    "subtitle": "Napravio idiot.",
+    "generate": "Generiraj Ragebait",
+    "copy": "Kopiraj",
+    "clickGenerate": "Klikni generiraj 👀",
+    "light": "Svijetlo",
+    "uncleMode": "Numerički Ujak Način",
+    "connector": "i rekao je",
+    "copied": "Kopirano!"
+  },
+  "categories": {
+    "food": "Hrana",
+    "history": "Povijest",
+    "bureaucracy": "Birokracija",
+    "driving": "Vožnja",
+    "general": "Općenito"
+  },
+  "phrases": {
+    "authority": [
+      "Moj ujak",
+      "Moj ujak u Hamburgu",
+      "Tip kojeg znam iz Njemačke",
+      "Umorni taksist",
+      "Netko tko je radio u vladi",
+      "Ujak #6.7"
+    ],
+    "credibility": [
+      "bio je tamo",
+      "zna kako to stvarno radi",
+      "objasnio je vrlo jasno",
+      "vidio je dokumente",
+      "čuo je osobno",
+      "ne laže o tim stvarima"
+    ],
+    "topics": {
+      "food": ["jogurt","rakija","burek","kava","podrijetlo salate"],
+      "history": ["granice","karte","tko je izmislio što","tko je prvi","kako se zapravo dogodilo"],
+      "bureaucracy": ["papiri","dozvole","vize","pečati","uredi koji zatvaraju rano"],
+      "driving": ["prometni propisi","vožnja taksijem","ograničenja brzine","parkiranje","ceste"],
+      "general": ["sve ostalo","vibe","zdrav razum","svakodnevni život","svi se slažu"]
+    },
+    "claims": [
+      "zapravo je isto svugdje",
+      "već je riješeno prije godina",
+      "ovisi o godini",
+      "ima smisla samo ako znaš vibru",
+      "svi to krivo razumiju",
+      "odlučeno je neslužbeno"
+    ],
+    "finishers": [
+      "Svi to znaju.",
+      "Nije sporno.",
+      "Ljudi jednostavno ne žele istinu.",
+      "Mislio sam da je to opće poznato.",
+      "Ne znam zašto ljudi raspravljaju."
+    ]
+  }
+}
