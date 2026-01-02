@@ -12,15 +12,25 @@
   <p>Made by an i d i o t.</p>
 
   <!-- Buttons -->
-  <button onclick="generate()">Generate Ragebait</button>
-  <button onclick="copyText()">📋 Copy to Clipboard</button>
+  <div class="top-buttons">
+    <button onclick="generate()">Generate Ragebait</button>
+    <button onclick="copyText()">📋 Copy to Clipboard</button>
+  </div>
+
+  <!-- Categories BELOW buttons -->
+  <div class="categories">
+    <label><input type="checkbox" value="Food"> Food</label>
+    <label><input type="checkbox" value="History"> History</label>
+    <label><input type="checkbox" value="Bureaucracy"> Bureaucracy</label>
+    <label><input type="checkbox" value="Driving"> Driving</label>
+    <label><input type="checkbox" value="General" checked> General</label>
+  </div>
 
   <!-- Output -->
   <div id="output" class="output">Click generate 👀</div>
 
-  <!-- Controls BELOW output -->
-  <div class="controls">
-
+  <!-- Toggles BELOW output -->
+  <div class="bottom-toggles">
     <!-- Theme Switch -->
     <label class="switch">
       <input type="checkbox" id="themeToggle" checked>
@@ -32,17 +42,8 @@
       <input type="checkbox" id="numMode"> 
       <span class="slider"></span> Numerical Uncle Mode
     </label>
-
-    <!-- Category Selector -->
-    <div class="categories">
-      <label><input type="checkbox" value="Food" checked> Food</label>
-      <label><input type="checkbox" value="History" checked> History</label>
-      <label><input type="checkbox" value="Bureaucracy" checked> Bureaucracy</label>
-      <label><input type="checkbox" value="Driving" checked> Driving</label>
-      <label><input type="checkbox" value="General" checked> General</label>
-    </div>
-
   </div>
+
 </div>
 
 <script src="script.js"></script>
