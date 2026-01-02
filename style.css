@@ -21,6 +21,7 @@ body {
   max-width: 650px;
 }
 
+/* Top Buttons */
 .top-buttons {
   display: flex;
   justify-content: center;
@@ -43,6 +44,7 @@ button:hover {
   background: #ff5c5c;
 }
 
+/* Categories Below Buttons */
 .categories {
   display: flex;
   justify-content: center;
@@ -70,7 +72,7 @@ body.light .output {
   color: #111;
 }
 
-/* Bottom Toggles Styling */
+/* Bottom Toggles Styling (Box Buttons) */
 .bottom-toggles {
   display: flex;
   justify-content: center;
@@ -78,13 +80,13 @@ body.light .output {
   margin-top: 10px;
 }
 
-/* Box Container for Sliders */
+/* Box Container for Buttons */
 .toggle-box {
   display: inline-block;
   padding: 10px;
   border-radius: 6px;
   background-color: #333;
-  width: 170px;
+  width: 180px;
   text-align: center;
 }
 
@@ -108,36 +110,18 @@ body.dark #lightModeBox {
   background-color: white;
 }
 
-/* Switch Styling */
-.switch {
-  display: inline-block;
-  position: relative;
-  width: 60px;
-  height: 28px;
-}
-
-.switch input { display: none; }
-
-.slider {
-  position: absolute;
+/* Box Buttons */
+button {
+  padding: 10px 16px;
+  font-size: 16px;
   cursor: pointer;
-  background-color: #ccc;
-  border-radius: 28px;
-  top: 0; left: 0; right: 0; bottom: 0;
-  transition: 0.4s;
+  border: none;
+  border-radius: 5px;
+  background: #ff3b3b;
+  color: white;
+  transition: 0.2s;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
+button:hover {
+  background: #ff5c5c;
 }
-
-input:checked + .slider { background-color: #ff3b3b; }
-input:checked + .slider:before { transform: translateX(32px); }
