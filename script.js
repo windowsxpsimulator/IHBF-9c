@@ -65,17 +65,17 @@ function generate() {
   document.getElementById("output").innerText = sentence;
 }
 
-document.getElementById("themeToggle").addEventListener("change", function() {
-  document.body.className = this.checked ? "dark" : "light";
+function toggleTheme() {
+  document.body.className = document.body.className === "dark" ? "light" : "dark";
   updateToggleBoxes();
-});
+}
 
-document.getElementById("numMode").addEventListener("change", function() {
+function toggleNumUncle() {
   updateToggleBoxes();
-});
+}
 
 function updateToggleBoxes() {
-  if (document.getElementById("themeToggle").checked) {
+  if (document.body.className === "dark") {
     document.getElementById("lightModeBox").style.backgroundColor = "black";
   } else {
     document.getElementById("lightModeBox").style.backgroundColor = "white";
