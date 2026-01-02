@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Balkan Ragebait Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<div class="container">
+  <h1>🧨 Balkan Ragebait Generator</h1>
+  <p>Made by an i d i o t.</p>
+
+  <!-- Top Buttons -->
+  <div class="top-buttons">
+    <button onclick="generate()">Generate Ragebait</button>
+    <button onclick="copyText()">📋 Copy to Clipboard</button>
+  </div>
+
+  <!-- Categories Below Buttons -->
+  <div class="categories">
+    <label><input type="checkbox" value="Food"> Food</label>
+    <label><input type="checkbox" value="History"> History</label>
+    <label><input type="checkbox" value="Bureaucracy"> Bureaucracy</label>
+    <label><input type="checkbox" value="Driving"> Driving</label>
+    <label><input type="checkbox" value="General" checked> General</label>
+  </div>
+
+  <!-- Output -->
+  <div id="output" class="output">Click generate 👀</div>
+
+  <!-- Bottom Toggles (Box Buttons) -->
+  <div class="bottom-toggles">
+    <!-- Light Mode Box -->
+    <div id="lightModeBox" class="toggle-box">
+      <button id="themeToggle" onclick="toggleTheme()">Dark / Light</button>
+    </div>
+
+    <!-- Numerical Uncle Box -->
+    <div id="numUncleBox" class="toggle-box">
+      <button id="numMode" onclick="toggleNumUncle()">Numerical Uncle Mode</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="sound.js"></script>
+</body>
+</html>
