@@ -67,7 +67,26 @@ function generate() {
 
 document.getElementById("themeToggle").addEventListener("change", function() {
   document.body.className = this.checked ? "dark" : "light";
+  updateToggleBoxes();
 });
+
+document.getElementById("numMode").addEventListener("change", function() {
+  updateToggleBoxes();
+});
+
+function updateToggleBoxes() {
+  if (document.getElementById("themeToggle").checked) {
+    document.getElementById("lightModeBox").style.backgroundColor = "black";
+  } else {
+    document.getElementById("lightModeBox").style.backgroundColor = "white";
+  }
+
+  if (document.getElementById("numMode").checked) {
+    document.getElementById("numUncleBox").style.backgroundColor = "green";
+  } else {
+    document.getElementById("numUncleBox").style.backgroundColor = "red";
+  }
+}
 
 function copyText() {
   const text = document.getElementById("output").innerText;
