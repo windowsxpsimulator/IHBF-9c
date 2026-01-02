@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Balkan Ragebait Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
 
-<div class="container">
-  <h1>🧨 Balkan Ragebait Generator</h1>
-  <p>Made by an i d i o t.</p>
+  <div class="container">
+    <h1>🧨 Balkan Ragebait Generator</h1>
 
-  <!-- Top Buttons -->
-  <div class="top-buttons">
-    <button onclick="generate()">Generate Ragebait</button>
-    <button onclick="copyText()">📋 Copy to Clipboard</button>
-  </div>
-
-  <!-- Categories Below Buttons -->
-  <div class="categories">
-    <label><input type="checkbox" value="Food"> Food</label>
-    <label><input type="checkbox" value="History"> History</label>
-    <label><input type="checkbox" value="Bureaucracy"> Bureaucracy</label>
-    <label><input type="checkbox" value="Driving"> Driving</label>
-    <label><input type="checkbox" value="General" checked> General</label>
-  </div>
-
-  <!-- Output -->
-  <div id="output" class="output">Click generate 👀</div>
-
-  <!-- Bottom Toggles (Box Buttons) -->
-  <div class="bottom-toggles">
-    <!-- Light Mode Box -->
-    <div id="lightModeBox" class="toggle-box">
-      <button id="themeToggle" onclick="toggleTheme()">Dark / Light</button>
+    <!-- Ragebait Output -->
+    <div id="ragebaitBox" class="ragebait-box">
+      Click generate to start an argument.
     </div>
 
-    <!-- Numerical Uncle Box -->
-    <div id="numUncleBox" class="toggle-box">
-      <button id="numMode" onclick="toggleNumUncle()">Numerical Uncle Mode</button>
+    <!-- Generate / Copy -->
+    <div class="button-row">
+      <button id="generateBtn">Generate Ragebait</button>
+      <button id="copyBtn">Copy to Clipboard</button>
     </div>
+
+    <!-- Categories -->
+    <div class="categories">
+      <button class="category active" data-category="general">General</button>
+      <button class="category" data-category="food">Food</button>
+      <button class="category" data-category="history">History</button>
+      <button class="category" data-category="bureaucracy">Bureaucracy</button>
+      <button class="category" data-category="driving">Driving</button>
+    </div>
+
+    <!-- Toggles -->
+    <div class="toggles">
+      <label class="toggle">
+        <input type="checkbox" id="themeToggle">
+        <span>🌙 / ☀️ Dark–Light</span>
+      </label>
+
+      <label class="toggle">
+        <input type="checkbox" id="uncleToggle">
+        <span>🔢 Numerical Uncle Mode</span>
+      </label>
+    </div>
+
+    <!-- 🌍 Language Selector -->
+    <div class="language-section">
+      <button id="languageBtn">🌍 Language</button>
+
+      <div id="languageMenu" class="language-menu hidden">
+        <button data-lang="en">🇬🇧 English</button>
+        <button data-lang="sr_lat">🇷🇸 Republika Srbija</button>
+        <button data-lang="sr_cyr">🇷🇸 Република Србија</button>
+        <button data-lang="bg">🇧🇬 България</button>
+        <button data-lang="mk">🇲🇰 Северна Македонија</button>
+        <button data-lang="ro">🇷🇴 România</button>
+        <button data-lang="hr">🇭🇷 Hrvatska</button>
+        <button data-lang="ba">🇧🇦 Bosna i Hercegovina</button>
+        <button data-lang="me">🇲🇪 Crna Gora</button>
+        <button data-lang="si">🇸🇮 Slovenija</button>
+        <button data-lang="al">🇦🇱 Shqipëria</button>
+        <button data-lang="gr">🇬🇷 Ελλάδα</button>
+        <button data-lang="hu">🇭🇺 Magyarország</button>
+        <button data-lang="tr">🇹🇷 Türkiye</button>
+      </div>
+    </div>
+
   </div>
 
-</div>
-
-<script src="script.js"></script>
-<script src="sound.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
