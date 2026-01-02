@@ -3,8 +3,11 @@ const authorities = [
   "My uncle who lives in Hamburg",
   "A guy I know from Germany",
   "A retired taxi driver",
-  "Someone who worked briefly in government",
-  "Uncle #6.7"
+  "Someone who worked briefly in government"
+];
+
+const numbers = [
+  "#1", "#2", "#3", "#4", "#5", "#6.7", "#8"
 ];
 
 const credentials = [
@@ -16,16 +19,13 @@ const credentials = [
   "doesn't lie about these things"
 ];
 
-const topics = [
-  "borders",
-  "yogurt",
-  "rakija",
-  "burek",
-  "paperwork",
-  "traffic rules",
-  "history",
-  "maps"
-];
+const topics = {
+  Food: ["yogurt", "rakija", "burek", "coffee", "salad origins"],
+  History: ["borders", "maps", "who invented what", "who was first", "what really happened"],
+  Bureaucracy: ["paperwork", "permits", "visas", "stamps", "offices closing early"],
+  Driving: ["traffic rules", "taxi driving", "speed limits", "parking", "roads"],
+  General: ["everything else", "vibes", "common sense", "daily life", "everyone agrees"]
+};
 
 const claims = [
   "is actually the same everywhere",
@@ -49,6 +49,35 @@ function random(arr) {
 }
 
 function generate() {
-  const sentence = `${random(authorities)} ${random(credentials)} and said ${random(topics)} ${random(claims)}. ${random(finishers)}`;
+  const numMode = document.getElementById("numMode").checked;
+  const checkedCategories = Array.from(document.querySelectorAll(".categories input:checked"))
+                                .map(c => c.value);
+  
+  // Build authority string
+  let authority = random(authorities);
+  if (numMode) authority += " " + random(numbers);
+
+  // Pick a topic based on selected categories
+  let availableTopics = [];
+  checkedCategories.forEach(cat => {
+    if (topics[cat]) availableTopics = availableTopics.concat(topics[cat]);
+  });
+  if (availableTopics.length === 0) availableTopics = topics["General"];
+  const topic = random(availableTopics);
+
+  const sentence = `${authority} ${random(credentials)} and said ${topic} ${random(claims)}. ${random(finishers)}`;
   document.getElementById("output").innerText = sentence;
+}
+
+// Theme toggle
+document.getElementById("themeToggle").addEventListener("change", function() {
+  document.body.className = this.checked ? "dark" : "light";
+});
+
+// Copy to clipboard
+function copyText() {
+  const text = document.getElementById("output").innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Copied to clipboard!");
+  });
 }
