@@ -1,7 +1,15 @@
-body {
-  font-family: Arial, sans-serif;
+body.dark {
   background: #111;
   color: #eee;
+}
+
+body.light {
+  background: #fefefe;
+  color: #222;
+}
+
+body {
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,16 +18,17 @@ body {
 
 .container {
   text-align: center;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 button {
-  padding: 12px 20px;
+  padding: 10px 16px;
+  margin: 5px;
   font-size: 16px;
   cursor: pointer;
-  background: #ff3b3b;
   border: none;
   border-radius: 5px;
+  background: #ff3b3b;
   color: white;
   transition: 0.2s;
 }
@@ -35,4 +44,49 @@ button:hover {
   border-radius: 6px;
   font-size: 18px;
   min-height: 60px;
+}
+
+body.light .output {
+  background: #ddd;
+  color: #111;
+}
+
+/* Switch Styling */
+.switch {
+  display: inline-block;
+  margin: 10px 0;
+  position: relative;
+  width: 60px;
+  height: 28px;
+}
+
+.switch input { display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 28px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider { background-color: #ff3b3b; }
+input:checked + .slider:before { transform: translateX(32px); }
+
+.categories label {
+  display: inline-block;
+  margin: 0 5px;
 }
