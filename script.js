@@ -46,7 +46,14 @@ function random(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+function playSound() {
+  const audio = new Audio('balkan_sound.mp3'); // Path to the sound file
+  audio.play(); // Play the sound when triggered
+}
+
 function generate() {
+  playSound(); // Play sound when generating ragebait
+
   const numMode = document.getElementById("numMode").checked;
   const checkedCategories = Array.from(document.querySelectorAll(".categories input:checked"))
                                 .map(c => c.value);
