@@ -2,70 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Balkan Ragebait Generator</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="dark">
 
-  <div class="container">
-    <h1>🧨 Balkan Ragebait Generator</h1>
+  <h1>🔥 Balkan Ragebait Generator</h1>
 
-    <!-- Ragebait Output -->
-    <div id="ragebaitBox" class="ragebait-box">
-      Click generate to start an argument.
+  <!-- Ragebait box -->
+  <div id="ragebait-box">
+    <p id="output">Click “Generate Ragebait”</p>
+  </div>
+
+  <!-- Toggles -->
+  <div class="toggle-row">
+    <label>
+      <input type="checkbox" id="themeToggle">
+      🌙 / ☀️
+    </label>
+
+    <label>
+      <input type="checkbox" id="uncleToggle">
+      Uncle Numerical Mode
+    </label>
+  </div>
+
+  <!-- Buttons -->
+  <div class="button-row">
+    <button onclick="generateRagebait()">Generate Ragebait</button>
+    <button onclick="copyToClipboard()">Copy to Clipboard</button>
+  </div>
+
+  <!-- Categories -->
+  <div class="category-row">
+    <button class="cat active" onclick="setCategory('general')">General</button>
+    <button class="cat" onclick="setCategory('food')">Food</button>
+    <button class="cat" onclick="setCategory('history')">History</button>
+    <button class="cat" onclick="setCategory('bureaucracy')">Bureaucracy</button>
+    <button class="cat" onclick="setCategory('driving')">Driving</button>
+  </div>
+
+  <!-- Language selector -->
+  <div class="language-container">
+    <button id="languageButton">🌍 Language</button>
+    <div id="languageMenu" class="language-menu hidden">
+      <button onclick="loadLanguage('en')">🇬🇧 English</button>
+      <button onclick="loadLanguage('bg')">🇧🇬 България</button>
+      <button onclick="loadLanguage('rs_lat')">🇷🇸 Republika Srbija</button>
+      <button onclick="loadLanguage('rs_cyr')">🇷🇸 Република Србија</button>
+      <button onclick="loadLanguage('gr')">🇬🇷 Ελλάδα</button>
     </div>
-
-    <!-- Generate / Copy -->
-    <div class="button-row">
-      <button id="generateBtn">Generate Ragebait</button>
-      <button id="copyBtn">Copy to Clipboard</button>
-    </div>
-
-    <!-- Categories -->
-    <div class="categories">
-      <button class="category active" data-category="general">General</button>
-      <button class="category" data-category="food">Food</button>
-      <button class="category" data-category="history">History</button>
-      <button class="category" data-category="bureaucracy">Bureaucracy</button>
-      <button class="category" data-category="driving">Driving</button>
-    </div>
-
-    <!-- Toggles -->
-    <div class="toggles">
-      <label class="toggle">
-        <input type="checkbox" id="themeToggle">
-        <span>🌙 / ☀️ Dark–Light</span>
-      </label>
-
-      <label class="toggle">
-        <input type="checkbox" id="uncleToggle">
-        <span>🔢 Numerical Uncle Mode</span>
-      </label>
-    </div>
-
-    <!-- 🌍 Language Selector -->
-    <div class="language-section">
-      <button id="languageBtn">🌍 Language</button>
-
-      <div id="languageMenu" class="language-menu hidden">
-        <button data-lang="en">🇬🇧 English</button>
-        <button data-lang="sr_lat">🇷🇸 Republika Srbija</button>
-        <button data-lang="sr_cyr">🇷🇸 Република Србија</button>
-        <button data-lang="bg">🇧🇬 България</button>
-        <button data-lang="mk">🇲🇰 Северна Македонија</button>
-        <button data-lang="ro">🇷🇴 România</button>
-        <button data-lang="hr">🇭🇷 Hrvatska</button>
-        <button data-lang="ba">🇧🇦 Bosna i Hercegovina</button>
-        <button data-lang="me">🇲🇪 Crna Gora</button>
-        <button data-lang="si">🇸🇮 Slovenija</button>
-        <button data-lang="al">🇦🇱 Shqipëria</button>
-        <button data-lang="gr">🇬🇷 Ελλάδα</button>
-        <button data-lang="hu">🇭🇺 Magyarország</button>
-        <button data-lang="tr">🇹🇷 Türkiye</button>
-      </div>
-    </div>
-
   </div>
 
   <script src="script.js"></script>
